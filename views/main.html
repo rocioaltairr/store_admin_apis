@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+</head>
+<body>
+
+<h1>Main Page</h1>
+
+<div id="accountInfo">
+    <!-- Account information will be displayed here -->
+</div>
+
+<script>
+    // Singleton to store user account data
+    // const AccountManager = (() => {
+    //     let instance;
+
+    //     function createInstance() {
+    //         let accountData;
+
+    //         return {
+    //             getAccountData: () => accountData,
+    //             setAccountData: (data) => { accountData = data; },
+    //             clearAccountData: () => { accountData = null; },
+    //         };
+    //     }
+
+    //     return {
+    //         getInstance: () => {
+    //             if (!instance) {
+    //                 instance = createInstance();
+    //             }
+    //             return instance;
+    //         },
+    //     };
+    // })();
+
+    // Retrieve user account data from the singleton
+    // const accountManager = AccountManager.getInstance();
+    // const userData = accountManager.getAccountData();
+
+    let hey = sessionStorage.getItem("user_name");
+    accountInfo.innerHTML = `Welcome, ${hey} `;
+</script>
+
+</body>
+</html>
